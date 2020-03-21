@@ -1,16 +1,23 @@
-//create a cursor div
-const createCursor = () => {
+//create a cursor element
+const createCursorElem = () => {
   const customCursor = document.createElement("div");
   customCursor.classList.add("c-cursor");
   document.body.prepend(customCursor);
 };
 
+const moveCursorElem = (x, y) => {
+  const customCursor = document.querySelector(".c-cursor");
+
+  customCursor.style.top = y + "px";
+  customCursor.style.left = x + "px";
+};
+
 //cursor function
 const initCursor = () => {
-  createCursor();
+  createCursorElem();
 
   document.body.addEventListener("mousemove", e => {
-    console.log(e.clientX, e.clientY);
+    moveCursorElem(e.clientX, e.clientY);
   });
 };
 
