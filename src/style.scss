@@ -160,11 +160,16 @@ body {
 $cursor-bg: #932f6d;
 
 .c-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+
   width: 15px;
   height: 15px;
 
   background-color: $cursor-bg;
   border-radius: 50%;
+  pointer-events: none;
 
   z-index: 2000;
 }

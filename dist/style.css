@@ -104,9 +104,13 @@ body * {
 }
 
 .c-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 15px;
   height: 15px;
   background-color: #932f6d;
   border-radius: 50%;
+  pointer-events: none;
   z-index: 2000;
 }
