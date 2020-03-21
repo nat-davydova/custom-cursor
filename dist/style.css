@@ -22,6 +22,8 @@ body a {
   padding: 10px 20px;
   display: inline-block;
   margin-right: 10px;
+  font-family: inherit;
+  font-size: inherit;
   background-color: #fff;
   border: 1px solid #2c2c2c;
   border-radius: 3px;
@@ -54,4 +56,38 @@ body a {
 .content {
   width: 95%;
   margin: 0 auto 50px;
+}
+
+.content__inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+.content__inner img {
+  width: 200px;
+}
+.content__inner input {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-right: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #fff;
+  border: 1px solid #2c2c2c;
+  border-radius: 3px;
+  outline: none;
+}
+.content__inner a {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+.content__inner a:hover {
+  color: #119da4;
 }

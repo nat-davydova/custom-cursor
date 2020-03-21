@@ -21,6 +21,7 @@
 
 //basic variables
 $theme-font-color: #2c2c2c;
+$theme-font-color-accent: #119da4;
 
 //common styles
 * {
@@ -48,6 +49,11 @@ body {
   padding: 10px 20px;
   display: inline-block;
   margin-right: 10px;
+
+  font: {
+    family: inherit;
+    size: inherit;
+  }
 
   background-color: #fff;
   border: 1px solid $theme-font-color;
@@ -96,4 +102,39 @@ body {
 }
 
 .content__inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+
+  img {
+    width: 200px;
+  }
+
+  input {
+    @include transition-mix;
+
+    padding: 10px 20px;
+    display: inline-block;
+    margin-right: 10px;
+
+    font: {
+      family: inherit;
+      size: inherit;
+    }
+
+    background-color: #fff;
+    border: 1px solid $theme-font-color;
+    border-radius: 3px;
+
+    outline: none;
+  }
+
+  a {
+    @include transition-mix;
+
+    &:hover {
+      color: $theme-font-color-accent;
+    }
+  }
 }
