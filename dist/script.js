@@ -1,4 +1,5 @@
-//create a cursor element
+const cursorChangeElems = document.querySelectorAll("[data-cursor-type]");
+
 const createCursorElem = () => {
   const customCursor = document.createElement("div");
   customCursor.classList.add("c-cursor");
@@ -13,9 +14,21 @@ const moveCursorElem = (x, y) => {
   requestAnimationFrame(moveCursorElem);
 };
 
-//cursor function
+const setHovers = changeElemsArr => {
+  changeElemsArr.forEach(elem => {
+    const behavioursArr = elem.dataset.cursorType.split(" ");
+
+    elem.addEventListener("mouseenter", hoverHandler.bind(behavioursArr));
+
+    elem.addEventListener("mouseout", outHandler);
+  });
+};
+
+//cursor init function
 const initCursor = () => {
   createCursorElem();
+
+  setHovers(cursorChangeElems);
 
   document.body.addEventListener("mousemove", e => {
     moveCursorElem(e.clientX, e.clientY);
