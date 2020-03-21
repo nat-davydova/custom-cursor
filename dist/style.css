@@ -5,6 +5,7 @@
 }
 
 body {
+  padding-top: 50px;
   font-family: "Muli", sans-serif;
   font-size: 16px;
   color: #2c2c2c;
@@ -40,7 +41,7 @@ body a {
 
 .header {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 0 auto 50px;
   text-align: center;
 }
 
@@ -90,4 +91,18 @@ body a {
 }
 .content__inner a:hover {
   color: #119da4;
+}
+
+body {
+  position: relative;
+}
+
+.c-cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: red;
+  z-index: 2000;
 }
