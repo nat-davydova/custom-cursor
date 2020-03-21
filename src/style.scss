@@ -146,6 +146,10 @@ body {
 // CURSOR STYLES !!!YOU NEED THEM
 body {
   position: relative;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
 }
 
 .c-cursor {

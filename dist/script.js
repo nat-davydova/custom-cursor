@@ -8,8 +8,9 @@ const createCursorElem = () => {
 const moveCursorElem = (x, y) => {
   const customCursor = document.querySelector(".c-cursor");
 
-  customCursor.style.top = y + "px";
-  customCursor.style.left = x + "px";
+  customCursor.style.transform = `translate(${x}px, ${y}px)`;
+
+  requestAnimationFrame(moveCursorElem);
 };
 
 //cursor function
@@ -18,6 +19,7 @@ const initCursor = () => {
 
   document.body.addEventListener("mousemove", e => {
     moveCursorElem(e.clientX, e.clientY);
+    requestAnimationFrame(moveCursorElem);
   });
 };
 
