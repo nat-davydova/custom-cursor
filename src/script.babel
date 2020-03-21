@@ -8,6 +8,10 @@ const createCursor = () => {
 //cursor function
 const initCursor = () => {
   createCursor();
+
+  document.body.addEventListener("mousemove", e => {
+    console.log(e.clientX, e.clientY);
+  });
 };
 
 initCursor();
