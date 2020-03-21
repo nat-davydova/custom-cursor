@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Muli", sans-serif;
   font-size: 16px;
   color: #2c2c2c;
 }
@@ -45,6 +45,10 @@ body a {
 .header__title {
   margin-bottom: 30px;
   font-size: 2.1rem;
+}
+
+.subtitle {
+  text-align: center;
 }
 
 .content {
