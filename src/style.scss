@@ -157,10 +157,14 @@ body {
   }
 }
 
+$cursor-bg: #932f6d;
+
 .c-cursor {
-  width: 50px;
-  height: 50px;
-  background: red;
+  width: 15px;
+  height: 15px;
+
+  background-color: $cursor-bg;
+  border-radius: 50%;
 
   z-index: 2000;
 }
