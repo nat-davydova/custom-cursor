@@ -15,12 +15,24 @@ const moveCursorElem = (x, y) => {
 };
 
 const addClasses = (elem, classesArr) => {
-  classesArr.forEach(classElem => elem.classList.add(classElem));
+  classesArr.forEach(classElem => elem.classList.add("c-cursor--" + classElem));
 };
 
-const hoverHandler = (elem, cursorElem, classesArr) => {
+const removeClasses = (elem, classesArr) => {
+  classesArr.forEach((classElem) =>
+  elem.classList.remove("c-cursor--" + classElem));
+
+};
+
+const mouseenterHandler = (elem, cursorElem, classesArr) => {
   elem.addEventListener("mouseenter", () => {
     addClasses(cursorElem, classesArr);
+  });
+};
+
+const mouseoutHandler = (elem, cursorElem, classesArr) => {
+  elem.addEventListener("mouseout", () => {
+    removeClasses(cursorElem, classesArr);
   });
 };
 
@@ -28,9 +40,8 @@ const setHovers = (cursorElem, changeElemsArr) => {
   changeElemsArr.forEach(elem => {
     const behavioursArr = elem.dataset.cursorType.split(" ");
 
-    hoverHandler(elem, cursorElem, behavioursArr);
-
-    //elem.addEventListener("mouseout", outHandler);
+    mouseenterHandler(elem, cursorElem, behavioursArr);
+    mouseoutHandler(elem, cursorElem, behavioursArr);
   });
 };
 
