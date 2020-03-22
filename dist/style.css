@@ -130,3 +130,7 @@ body * {
 .c-cursor--scale:after {
   transform: scale(2);
 }
+
+.c-cursor--opacity:after {
+  opacity: 0.7;
+}
