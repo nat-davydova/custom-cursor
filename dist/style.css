@@ -109,8 +109,24 @@ body * {
   top: 0;
   width: 15px;
   height: 15px;
-  background-color: #932f6d;
-  border-radius: 50%;
   pointer-events: none;
   z-index: 2000;
+}
+.c-cursor:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #932f6d;
+  border-radius: 50%;
+}
+
+.c-cursor--scale:after {
+  transform: scale(2);
 }
