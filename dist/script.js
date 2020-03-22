@@ -1,13 +1,15 @@
+const cursorClassname = "c-cursor";
+
 const cursorChangeElems = document.querySelectorAll("[data-cursor-type]");
 
 const createCursorElem = () => {
   const customCursor = document.createElement("div");
-  customCursor.classList.add("c-cursor");
+  customCursor.classList.add(cursorClassname);
   document.body.prepend(customCursor);
 };
 
 const moveCursorElem = (x, y) => {
-  const cursorElem = document.querySelector(".c-cursor");
+  const cursorElem = document.querySelector(`.${cursorClassname}`);
 
   cursorElem.style.transform = `translate(${x}px, ${y}px)`;
 
@@ -15,12 +17,14 @@ const moveCursorElem = (x, y) => {
 };
 
 const addClasses = (elem, classesArr) => {
-  classesArr.forEach(classElem => elem.classList.add("c-cursor--" + classElem));
+  classesArr.forEach((classElem) =>
+  elem.classList.add(`${cursorClassname}--${classElem}`));
+
 };
 
 const removeClasses = (elem, classesArr) => {
   classesArr.forEach((classElem) =>
-  elem.classList.remove("c-cursor--" + classElem));
+  elem.classList.remove(`${cursorClassname}--${classElem}`));
 
 };
 
@@ -49,7 +53,7 @@ const setHovers = (cursorElem, changeElemsArr) => {
 const initCursor = () => {
   createCursorElem();
 
-  const cursorElem = document.querySelector(".c-cursor");
+  const cursorElem = document.querySelector(`.${cursorClassname}`);
 
   setHovers(cursorElem, cursorChangeElems);
 
