@@ -7,20 +7,30 @@ const createCursorElem = () => {
 };
 
 const moveCursorElem = (x, y) => {
-  const customCursor = document.querySelector(".c-cursor");
+  const cursorElem = document.querySelector(".c-cursor");
 
-  customCursor.style.transform = `translate(${x}px, ${y}px)`;
+  cursorElem.style.transform = `translate(${x}px, ${y}px)`;
 
   requestAnimationFrame(moveCursorElem);
 };
 
-const setHovers = changeElemsArr => {
+const addClasses = (elem, classesArr) => {
+  classesArr.forEach(classElem => elem.classList.add(classElem));
+};
+
+const hoverHandler = (elem, cursorElem, classesArr) => {
+  elem.addEventListener("mouseenter", () => {
+    addClasses(cursorElem, classesArr);
+  });
+};
+
+const setHovers = (cursorElem, changeElemsArr) => {
   changeElemsArr.forEach(elem => {
     const behavioursArr = elem.dataset.cursorType.split(" ");
 
-    elem.addEventListener("mouseenter", hoverHandler.bind(behavioursArr));
+    hoverHandler(elem, cursorElem, behavioursArr);
 
-    elem.addEventListener("mouseout", outHandler);
+    //elem.addEventListener("mouseout", outHandler);
   });
 };
 
@@ -28,7 +38,9 @@ const setHovers = changeElemsArr => {
 const initCursor = () => {
   createCursorElem();
 
-  setHovers(cursorChangeElems);
+  const cursorElem = document.querySelector(".c-cursor");
+
+  setHovers(cursorElem, cursorChangeElems);
 
   document.body.addEventListener("mousemove", e => {
     moveCursorElem(e.clientX, e.clientY);
