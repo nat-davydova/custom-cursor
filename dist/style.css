@@ -136,6 +136,10 @@ body * {
   transform: scale(2.3);
 }
 
+.c-cursor--scale-xl:after {
+  transform: scale(2.6);
+}
+
 .c-cursor--opacity:after {
   opacity: 0.7;
 }
@@ -143,7 +147,7 @@ body * {
 .c-cursor--icon:after {
   content: "\f067";
   font-weight: 900;
-  font-size: 9px;
+  font-size: 5px;
 }
 
 .c-cursor--border:after {

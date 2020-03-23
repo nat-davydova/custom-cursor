@@ -201,6 +201,12 @@ $cursor-bg: #932f6d;
   }
 }
 
+.c-cursor--scale-xl {
+  &:after {
+    transform: scale(2.6);
+  }
+}
+
 .c-cursor--opacity {
   &:after {
     opacity: 0.7;
@@ -211,7 +217,7 @@ $cursor-bg: #932f6d;
   &:after {
     content: "\f067";
     font-weight: 900;
-    font-size: 9px;
+    font-size: 5px;
   }
 }
 
