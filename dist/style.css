@@ -137,7 +137,7 @@ body * {
 }
 
 .c-cursor--scale-xl:after {
-  transform: scale(2.6);
+  transform: scale(3.5);
 }
 
 .c-cursor--opacity:after {
