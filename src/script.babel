@@ -58,6 +58,8 @@ const initCursor = () => {
   setHovers(cursorElem, cursorChangeElems);
 
   document.body.addEventListener("mousemove", e => {
+    cursorElem.style.top = 0;
+    cursorElem.style.left = 0;
     moveCursorElem(e.clientX, e.clientY);
     requestAnimationFrame(moveCursorElem);
   });

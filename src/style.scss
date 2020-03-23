@@ -161,8 +161,8 @@ $cursor-bg: #932f6d;
 
 .c-cursor {
   position: fixed;
-  left: 0;
-  top: 0;
+  left: -100px;
+  top: -100px;
 
   width: 11px;
   height: 11px;
