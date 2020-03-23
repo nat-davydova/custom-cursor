@@ -7,7 +7,7 @@
 * HTML/Pug
 * SCSS/CSS (including transitions)
 * JS (ES6+, Babel)
-* 4 predefined effects, easy to combine with each other
+* 4 predefined effects, easily combined with each other
 
 
  
