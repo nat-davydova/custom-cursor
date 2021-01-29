@@ -2,7 +2,7 @@
  
 [Check the Demo](https://codepen.io/nat-davydova/full/zYGLgQQ)
 
-<img src="http://natali-davydova.me/assets/img/portfolio/custom-cursor/sample-1.jpg" width="550" />
+<img src="http://natali-davydova.me/assets/img/custom-cursor/sample-1.jpg" width="550" />
 
 * HTML/Pug
 * SCSS/CSS (including transitions)
